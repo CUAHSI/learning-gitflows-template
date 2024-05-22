@@ -1,4 +1,4 @@
-Welcome to the end of the hands on tutorial with Git and GitHub! You have now been exposed and practiced the basic workflow that USGS DS uses for collaborating on codebases. See the bottom of this issue for instructions about next steps.
+Welcome to the end of the hands on tutorial with Git and GitHub! You have now been exposed and practiced the basic workflow that is common for collaborating on codebases in open science. See the bottom of this issue for instructions about next steps.
 
 ## The conceptual diagram of the workflow you just learned/used 
 
@@ -23,21 +23,21 @@ Welcome to the end of the hands on tutorial with Git and GitHub! You have now be
 ### Moving your local commits to your fork
 
 1. Run `git push origin main`
-1. Look at the "commits" page on your fork on GitHub to see your new commits.
+1. Look at the "commits" page on your fork on GitHub to see your new commits (click "X commits" below the green `<> Code` dropdown button).
 
 ### Adding your changes to the canonical repository
 
 1. Once you have changes on your fork that make it different from the canonical repository, go to your fork's GitHub page and click "New pull request". 
 1. In the next screen, verify that the `base` repository shows the canonical and the `head` repository shows your fork. 
 1. Click "Create pull request".
-1. Add a title and description. Include a peer as a reviewer and link to any related issues by adding `#[issue number]` in your description.
-1. The reviewer will merge the changes.
+1. Add a title and description. Include a reviewer. If the PR addresses specific issues in your GitHub repo, link to them by adding `#[issue number]` in your description.
+1. The reviewer will approve/merge the changes.
 1. Close the loop by pulling down the changes from upstream to your local repo - `git pull upstream main`
 
 ### Handling merge conflicts
 
 1. If you have a merge conflict after pulling down changes, look in the file(s) that have been flagged as having conflicts.
-1. Inspect the content between `<<<<<<< HEAD` and `=======`, which is the content that existed before the merge (likely your content).
+1. Inspect the content between `<<<<<<< HEAD` and `=======`, which is the content that existed before the merge (likely your local content).
 1. Now inspect the content between `=======` and `>>>>>>> [string of letters and numbers]`, which is the content that is trying to be merged with what currently exists locally (likely the remote content).
 1. Decide what of that content to keep and what to delete.
 1. Remove the merge conflict symbols, `<<<<<<< HEAD`, `=======`, and `>>>>>>> [string of letters and numbers]`.
@@ -48,8 +48,8 @@ Welcome to the end of the hands on tutorial with Git and GitHub! You have now be
 There is a lot more Git that can be learned, but the above are the basics that will probably be enough for awhile. As you start to get more advanced, there may be some additional concepts/commands you should learn such as, 
 
 * Temporarily hiding changes in order to pull upstream changes to avoid conflicts (`git stash`, `git stash apply`),
-* branching (`git checkout -b`), and
-* much more!
+* branching (`git switch -c`, `git checkout`), and
+* [much more](https://git-scm.com/doc)!
 
 ----
 **Action:** Once you are done reading this, close this issue and return to the canonical repo's main GitHub page `https://github.com/USGS-R/ds-gitflows-[username]`.
