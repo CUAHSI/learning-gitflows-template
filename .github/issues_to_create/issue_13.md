@@ -1,4 +1,4 @@
-In the last issue, we pulled down changes from our collaborator and realized that there was a merge conflict. This occurs when you edit the same line of code. In this case, you both added on to the last line of the file. Don't worry - merge conflicts are not as intimidating as they may seem. Let's do this!
+In the last step, we pulled down changes from our collaborator and realized that there was a merge conflict. This occurs when you edit the same line of code. In this case, you both added on to the last line of the file. Don't worry - merge conflicts are not as intimidating as they may seem. Let's do this!
 
 ----
 **Action:** Fix the merge conflict. 
@@ -28,10 +28,10 @@ You start thinking... a reservoir (you can call it a lake) above town could real
 
 5. Now, continuing on. Examine the differences between the "Storing Water for a Rainy Day" sections. Can you find any?
 6. The only difference should be that your version (the top one) has a hyperlink for the hydroelectric power plant, while the version that is being merged does not. So, we actually want to keep only the version that you created. 
-7. Delete the content between `=======` and `>>>>>>>`.
+7. Delete the content between `=======` and `>>>>>>>` (the bottom section).
 8. Now you are left with the merge conflict symbols and the correct version of the "Storing Water for a Rainy Day" section. Delete all of the symbols related to the merge conflict (`<<<<<<< HEAD`, `=======`, and `>>>>>>> [random letters/numbers]`). Now, you should be back to where you started (which happens in merge conflict resolution sometimes).
 9. Save the file.
 10. The last step for resolving a merge confict is to commit your changes. Follow the same pattern as before. Running `git status` will show you that you have an unresolved merge conflict. Just as before, run `git add dryville_story.md` to stage your changed file. Then commit by running `git commit -m "resolve merge conflict"`. 
-11. Now, when you run `git status` you will see that you don't have any changes to commit (but your branch still ahead of `origin/main` - see next issue).
+11. Now, when you run `git status` you will see that you don't have any changes to commit (but your branch is still ahead of `origin/main` - which is fine and will be addressed next).
 
 You successfully resolved a conflict! Close this issue and move on to the next one.
