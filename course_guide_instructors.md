@@ -1,4 +1,4 @@
-# Course Faciliation Guide
+# Course Facilitation Guide
 
 This template repository contains the starting content to teach the common open-source, fork-and-pull style workflow. For the full experience, it requires a course contact to review and merge pull requests. It is currently available as either static instructions (participants read through a single document and a course contact must take actions beyond the PR reviews) or a dynamic course (participants complete separate GitHub issues and closing issues triggers certain actions automatically). Both of these course types require participants to actually use Git commands locally and interact with GitHub repositories.
 
