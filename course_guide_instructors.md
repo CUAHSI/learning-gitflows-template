@@ -35,7 +35,7 @@ Below is a suggested email/message:
 
 Every participant taking this course will need their own repo based on this template. A course facilitator will need to take action here. Before you do this, you will need to collect the GitHub usernames of each participant as requested in the initial message/email that went out to participants (see previous step). Once you have that information, you can run through the repo setup steps below.
 
-1. Create the new repository using the "Use this template" button near the top and name the repo `learning-gitflows-[username]`.
+1. Create the new repository using the "Use this template" button near the top and name the repo `learning-gitflows-[username]`. DO NOT check the box that says "Include all branches". You can optionally fill in the repo description with "Git training repo for [ Learner's Name ]". Then choose "Create repository".
 1. Customize/cleanup the repo. Follow the additional instructions below this list depending on whether you are offering this course as the static or dynamic version. Then return here to do step 3.
 1. Change the settings so that PRs cannot be merged without a review. Go to Settings > Branches > Click "Edit" next to `main`. Then, check the boxes next to `Require a pull request before merging` and `Require approvals`. Make sure the required number of approvals is set to 1. See image below this list for an example of what this should look like.
 1. Invite the participant as a collaborator to this new repository.
