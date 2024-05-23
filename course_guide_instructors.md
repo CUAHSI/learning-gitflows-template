@@ -90,27 +90,43 @@ If you are named as a course contact for someone who is taking the course, the f
 
 ### Static course
 
-For the static course, you will need to have the repo setup locally in order to perform two actions as someone progresses through the tutorial.
-
-TODO: FILL IN INSTRUCTIONS [BELOW ARE THE OLD ONES]
-
-1. For each participant, create a new blank project in the ["gitflows trainings" group](https://code.usgs.gov/wma/dsp/trainings/gitflows-trainings). Use the naming convention `ds-gitflows-[username]` for each participant. Choose "Internal" visibility. Do not allow the system to create a README. These will be considered the canonical repositories for each participant.
-1. Set the project you just created to be accessible by the user. Manage -> Members -> Invite Members. **Use the "Developer" role.**
-1. In the project you just created, go to Settings -> Repository, choose "Protected branches", and set `main` up to be protected with permissions like this: ![](archive/img/protected_branch_settings.PNG)
-1. For each participant, clone the repo you are looking at now to a fresh directory on your local computer, and then push it to the project you just created in the step above. Use commands like the following:
+For the static course, you will need to have the repo setup locally in order to perform two actions as someone progresses through the tutorial. If you expect to be the course contact for more than one person, consider making a folder in which to store all of these repos.
 
 ```bash
-git clone git@code.usgs.gov:wma/dsp/trainings/ds-gitflows-static-template.git scratch_directory
-cd scratch_directory
-git remote rename origin old-origin
-git remote add origin git@code.usgs.gov:wma/dsp/trainings/gitflows-trainings/ds-gitflows-[username]
-git push -u origin
-cd ..
-rm -rf scratch_directory
+git clone git@github.com:[org]/learning-gitflows-[username].git
+cd learning-gitflows-[username]
 ```
+
+There are five places where you *must* take action and be ready to help move someone along. There may be other times that a learner reaches out with a question but these are the necessary actions that you must take to move the course forward:
+
+1. **Between steps 8 and 9: approve and merge their very first PR.** Step 8 (called `Request to add your changes to the canonical repo`) instructs a learner to open a new PR that should contain two commits both with changes to the `dryville_story.md` file. The first commit adds three paragraphs under a header called `## Getting Water to Your Homes`. You should expect to see three hyperlinks, one in each paragraph, for the phrases/words `over 8 pounds a gallon`, `Water does flow downhill`, and `creek`. The second commit adds two paragraphs under the header `## Dryville's First Water Works`. There is only one hyperlink here for the words `aqueduct system`. They need those elements + a title + a brief description. If all of those things exist, you can [approve the PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/approving-a-pull-request-with-required-reviews) and then merge it. They should get confirmation that they can move on but you can also add a comment that explicitly says "You're all set to move on to the next step!" 
+
+2. **Between steps 9 and 10: commit new content as a collaborator.** After they close the loop from their merged PR to their local repo in Step 9, they will reach out to you to say that they have done so. At this time you should commit new content to mimic a real world scenario where a collaborator adds content. First, make sure you pull down their changes with a `git pull origin main`. Then, copy and paste the contents of [this file](https://github.com/CUAHSI/learning-gitflows-template/blob/main/.github/commit_content/be_gone_dirty_water.md) to the bottom of the `dryville_story.md` (make sure the hyperlink is included). Then, run the commands below to commit and push the change up to the repo. Once you see your commit up there, let them know they can continue to Step 10 `Get a collaborator's content locally` in the course.
+
+```bash
+git add dryville_story.md
+git commit -m "add be-gone-dirty-water section"
+git push origin main
+```
+
+3. **During Step 11: commit a change to initiate a merge conflict.** After they successfully pull down your content in Step 10, they will reach out letting you know they are starting Step 11 `Add two new sections of the story`. In this step, they will add two new sections to the story during Step 11. At the same time, you will also make a commit to this file and create a merge conflict. Your commit will include *almost* the same content as their second commit which adds a section with the header `## Storing Water for a Rainy Day`. The main difference is that your commit will not have a hyperlink on the word `reservoir`. To make the commit, first make sure you are up-to-date by running `git pull origin main`. Then, copy and paste the content from [this file](https://github.com/CUAHSI/learning-gitflows-template/blob/main/.github/commit_content/storing_water.md) to the bottom of the `dryville_story.md` file (there *should not* be any hyperlinks in this new section). Now run these commands to commit and push this change.
+
+```bash
+git add dryville_story.md
+git commit -m "add storing-water section"
+git push origin main
+```
+
+4. **Between steps 14 and 15: approve and merge the second pull request.** After they successfully conquer a merge request, they should have added two new sections to the Dryville story document and will send you a pull request to review with these additions. This PR should have 3 commits: one that adds the section `## Your First Flood`, one that adds the section `## Storing Water for a Rainy Day`, and one that resolves the merge conflict. In the end they should only have the three paragraphs of text between these two new header sections, no remaining merge conflict symbols, and the word `reservoir` in the first sentence of the second section should be a hyperlink (this was the result of the merge conflict resolution). There should also be a reasonable title and description. If they have all of these elements, you can [approve the PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/approving-a-pull-request-with-required-reviews) and then merge it. They should get confirmation that they can move on but you can also add a comment that explicitly says "You're all set to move on to the next step!"
+
+5. **Between steps 16 and 17: approve and merge the third and final pull request.** Step 16 introduces the idea of a `.gitignore` file. This file already exists in the repository but their open PR should contain a new line with the name `wss-icon-small-teacher.png` to gitignore this image. Check that their PR has a title, description, and only the one change in the `.gitignore` file. Make a comment requesting changes or describing why something is different than you expected if their PR does not match those expectations. If it does, you can [approve the PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/approving-a-pull-request-with-required-reviews) and then merge it. They should get confirmation that they can move on but you can also add a comment that explicitly says "You're all set to move on to the next step!". This last step is just closing out their course with some final thoughts and information. No further action is needed from you to move them along.
 
 ### Dynamic course
 
-TODO: FILL IN INSTRUCTIONS
+For the dynamic course option, there are three places where you *must* take action and be ready to help move someone along. Otherwise, the course will progress by the individual closing issues and the GitHub Actions Bot reacting to certain events, though there may be other times that a learner reaches out with a question.
+
+Rather than duplicating instructions, we will point you to the actions described in the static course contact section above. Numbers 1, 4, and 5 from the static course contact instructions represent the actions you must take in the dynamic course. One exception is that in addition to the elements listed, you should confirm or point out that learners can start their PR description with the phrase `Fixes #X` in order to autoclose an issue. At a minimum, learners should link to the issue they are resolving in their description before you approve and merge.
+
+Numbers 2 and 3 from the static course contact instructions represent the manual work that a course contact must do to replace GitHub Actions in the static version of the course. You do not need to do either of those here since a GitHub Action will do it for you. Instead, just know what is supposed to happen. In number 2 above, a GitHub Action to add collaborator content is triggered when Issue 9 closes. In number 3 above, a GitHub Action to add content that creates a merge conflict is triggered when Issue 10 closes.
 
 TODO: See [Issue #10](https://github.com/CUAHSI/learning-gitflows-template/issues/10) because the dynamic course may not yet be functioning. 
