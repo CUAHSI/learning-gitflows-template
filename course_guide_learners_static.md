@@ -399,7 +399,7 @@ The last topic we are going to cover in this tutorial is the `.gitignore` file. 
 
 1. First, open the `.gitignore` file that is in your local directory using a text editor (for example, Notepad++). It should be completely empty.
 1. Next, download [this image](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/side_image/public/thumbnails/image/wss-icon-small-teacher.png?itok=PZHHzOTP) (right click and choose "Save image as") and save as `wss-icon-small-teacher.png` in your `ds-gitflows-[username]` folder. 
-1. Now in Git Bash, run `ls` to "list" the items in your current working directory. You should see about 10 files, three of which are `course-instructions.md`, `dryville_story.md`, and `wss-icon-small-teacher.png`. Note that the `.gitignore` file doesn't show up with `ls` because it is technically a "hidden" file (starts with a `.`).
+1. Now in Git Bash, run `ls` to "list" the items in your current working directory. You should see about 10 files, three of which are `course_guide.md`, `dryville_story.md`, and `wss-icon-small-teacher.png`. Note that the `.gitignore` file doesn't show up with `ls` because it is technically a "hidden" file (starts with a `.`).
 1. So, you've added a new file to your repository. Now, run `git status`. Git shows that `wss-icon-small-teacher.png` is an untracked file. We could leave it like that and just try to remember to not commit it, but that seems risky. The more foolproof way is to to add it to the `.gitignore` file.  
 1. Add `wss-icon-small-teacher.png` to the `.gitignore` file. Save the file.
 1. Now run `git status`. It no longer shows `wss-icon-small-teacher.png` as an untracked file, but instead shows that we have modified `.gitignore`. That is because this file is version controlled - whenever we change it, we push those changes to the upstream repository so that everyone uses the same one. 
@@ -409,7 +409,7 @@ git add .gitignore
 git commit -m "add downloaded image to gitignore"
 git push origin main
 ```
-8. Finally, create a merge request. Make sure to add your course contact as the reviewer of your MR. Revisit the "Request to add your changes to the canonical repo" section of this course-instructions.md doc if you need any reminders for how to do this.
+8. Finally, create a merge request. Make sure to add your course contact as the reviewer of your MR. Revisit the "Request to add your changes to the canonical repo" section of this `course_guide.md` doc if you need any reminders for how to do this.
 
 Once you open your MR, wait for it to be reviewed and merged. Once your MR has been merged, close this issue and go to the next one.
 

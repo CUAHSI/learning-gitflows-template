@@ -1,4 +1,4 @@
-# USGS Data Science tutorial for Git and GitHub workflow
+# Git and GitHub tutorial for collaborative coding
 
 ![congrats](https://user-images.githubusercontent.com/13220910/81443707-86452d80-913b-11ea-9ad4-7be24ff64c39.gif)
 

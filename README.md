@@ -1,28 +1,13 @@
-# learning-gitflows-template
-Training materials for learning the basics of git and GitHub for collaborative coding
+# Git and GitHub tutorial for collaborative coding
 
-This template repository contains the issues and starting content to teach the DS fork-and-pull style workflow. For the full experience, it requires a course contact to review and merge your pull requests. 
+Training materials for learning the basics of git and GitHub for collaborative coding.
 
 ## I'm a learner
 
-1. Go to the repo that matches your username (`https://code.usgs.gov/wma/dsp/trainings/gitflows-trainings/ds-gitflows-[username]`) and fork it. There are a couple of differences from GitHub here. On code.usgs.gov, the button to do this says "Forks" instead of "Fork". Additionally, when you fork, you will be asked to choose a namespace. At the bottom of the list there is a namespace for you own account. Choose this.
-1. On your fork, click on `course-instructions.md` to start the course.
+If you are someone taking this training, you are in the right place if your URL looks something like `www.github.com/[org]/learning-gitflows-[username]`, where `[org]` is an organization name (e.g. `CUAHSI` or `DOI-USGS`) and `[username]` is your username. Make note of this URL and the pattern described as it is referenced throughout the training materials.
 
-## I'm leading the course
+To get started, open the file `course_guide.md` in a new tab. That file will guide you through this course. No need to read any more of this README document! 
 
-This repo is to be used as a "template". **Rather than forking it, we download it and re-upload it under another name.**
+## I'm an instructor/facilitator
 
-1. For each participant, create a new blank project in the ["gitflows trainings" group](https://code.usgs.gov/wma/dsp/trainings/gitflows-trainings). Use the naming convention `ds-gitflows-[username]` for each participant. Choose "Internal" visibility. Do not allow the system to create a README. These will be considered the canonical repositories for each participant.
-1. Set the project you just created to be accessible by the user. Manage -> Members -> Invite Members. **Use the "Developer" role.**
-1. In the project you just created, go to Settings -> Repository, choose "Protected branches", and set `main` up to be protected with permissions like this: ![](archive/img/protected_branch_settings.PNG)
-1. For each participant, clone the repo you are looking at now to a fresh directory on your local computer, and then push it to the project you just created in the step above. Use commands like the following:
-
-```bash
-git clone git@code.usgs.gov:wma/dsp/trainings/ds-gitflows-static-template.git scratch_directory
-cd scratch_directory
-git remote rename origin old-origin
-git remote add origin git@code.usgs.gov:wma/dsp/trainings/gitflows-trainings/ds-gitflows-[username]
-git push -u origin
-cd ..
-rm -rf scratch_directory
-```
+If you are either facilitating a training or acting as a course contact for an individual taking the training, you should follow along with the extensive guide for someone setting up and administering the course by visiting the course facilitation guide in `course_guide_instructors.md`. Note that this file will not exist if you are in an individual learner's repository. It should only appear in the template repository: https://github.com/CUAHSI/learning-gitflows-template.
