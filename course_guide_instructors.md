@@ -92,11 +92,7 @@ If you are named as a course contact for someone who is taking the course, the f
 
 For the static course, you will need to have the repo setup locally in order to perform two actions as someone progresses through the tutorial.
 
-### Dynamic course
-
 TODO: FILL IN INSTRUCTIONS [BELOW ARE THE OLD ONES]
-
-TODO: See [Issue #10](https://github.com/CUAHSI/learning-gitflows-template/issues/10) because the dynamic course may not yet be functioning. 
 
 1. For each participant, create a new blank project in the ["gitflows trainings" group](https://code.usgs.gov/wma/dsp/trainings/gitflows-trainings). Use the naming convention `ds-gitflows-[username]` for each participant. Choose "Internal" visibility. Do not allow the system to create a README. These will be considered the canonical repositories for each participant.
 1. Set the project you just created to be accessible by the user. Manage -> Members -> Invite Members. **Use the "Developer" role.**
@@ -112,3 +108,9 @@ git push -u origin
 cd ..
 rm -rf scratch_directory
 ```
+
+### Dynamic course
+
+TODO: FILL IN INSTRUCTIONS
+
+TODO: See [Issue #10](https://github.com/CUAHSI/learning-gitflows-template/issues/10) because the dynamic course may not yet be functioning. 
