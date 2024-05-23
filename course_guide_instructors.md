@@ -90,7 +90,7 @@ If you are named as a course contact for someone who is taking the course, the f
 
 ### Static course
 
-For the static course, you will need to have the repo setup locally in order to perform two actions as someone progresses through the tutorial. If you expect to be the course contact for more than one person, consider making a folder in which to store all of these repos.
+For the static course, you will need to have the repo setup locally in order to perform some of the actions as someone progresses through the tutorial. If you expect to be the course contact for more than one person, consider making a folder in which to store all of these repos.
 
 ```bash
 git clone git@github.com:[org]/learning-gitflows-[username].git
@@ -123,7 +123,7 @@ git push origin main
 
 ### Dynamic course
 
-For the dynamic course option, there are three places where you *must* take action and be ready to help move someone along. Otherwise, the course will progress by the individual closing issues and the GitHub Actions Bot reacting to certain events, though there may be other times that a learner reaches out with a question.
+For the dynamic course option, there are three places where you *must* take action and be ready to help move someone along. However, you do not need to setup the repo locally. Your actions can be completed on GitHub. Besides those three actions, the course will progress by the individual closing issues and the GitHub Actions Bot reacting to certain events, though there may be other times that a learner reaches out with a question.
 
 Rather than duplicating instructions, we will point you to the actions described in the static course contact section above. Numbers 1, 4, and 5 from the static course contact instructions represent the actions you must take in the dynamic course. One exception is that in addition to the elements listed, you should confirm or point out that learners can start their PR description with the phrase `Fixes #X` in order to autoclose an issue. At a minimum, learners should link to the issue they are resolving in their description before you approve and merge.
 
