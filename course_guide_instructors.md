@@ -44,7 +44,7 @@ Every participant taking this course will need their own repo based on this temp
 
 #### Static course repo setup
 
-The following actions need to happen **in each** participant's course repo.
+After following the instructions for creating the new repo (they are the same for both static and dynamic courses), complete the following actions **in each** participant's course repo.
 
 Delete the following folders/files:
 
@@ -56,7 +56,7 @@ Rename `course_guide_learners_static.md` to `course_guide.md`.
 
 #### Dynamic course repo setup
 
-For **each** participant's course repo, star the repo (it might need to be a specific person) to kick-off the setup GitHub Actions workflow which will remove unneeded files, rename the correct course guide markdown file, and create all the issues.
+After following the instructions for creating the new repo described above (they are the same for both static and dynamic courses), **each** participant's course repo will need to be starred (it might need to be a specific person) to kick-off the setup GitHub Actions workflow which will remove unneeded files, rename the correct course guide markdown file, and create all the issues.
 
 TODO: See [Issue #10](https://github.com/CUAHSI/learning-gitflows-template/issues/10) because the dynamic course may not yet be functioning. 
 
