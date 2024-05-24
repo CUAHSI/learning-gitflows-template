@@ -15,9 +15,6 @@ There is a main version of the code that people are collaboratively developing (
 
 We are going to walk through each of these steps within the workflow in this lesson. We will also learn about merge conflicts and what a `.gitignore` file is all about. 
 
-----
-**Action:** Close this issue after you read about the workflow and proceed to the next issue in sequential order.
-
 </details>
 
 <hr>
@@ -38,7 +35,7 @@ The first step in our workflow when working on a new project is to fork the cano
 3. If prompted with `Where should we fork ...`, choose your user account.
 4. When it is complete, you should be on a new webpage. Instead of `https://github.com/[org]/learning-gitflows-[username]`, you will now see `https://github.com/[username]/learning-gitflows-[username]` at the top.
 
-Congratulations! You've made your own copy of the main repository. Close this issue and proceed to the next one.
+Congratulations! You've made your own copy of the main repository. Now on to the next section!
 
 </details>
 
@@ -71,7 +68,7 @@ What we need to do now is link the canonical repository to your local copy. This
 6. Hit enter.
 7. Now, when you run `git remote -v` you should see a list with both an `upstream` remote and an `origin` remote.
 
-You have now set up your new project for collaborative development! We are ready to start making changes. Close this issue and move on to the next one.
+You have now set up your new project for collaborative development! We are ready to start making changes. 
 
 </details>
 
@@ -95,7 +92,7 @@ We will be using the `dryville_story.md` file to illustrate changes to a reposit
 1. To make a commit, run `git commit -m "[insert your message here]"`. For this change, we will run `git commit -m "add getting-water-to-your-homes section"`. Any change that was listed under the "Changes to be committed" section when we ran `git status` will be included in this commit.
 1. Run `git status` again. We should be back to where we started. There is "nothing to commit" because we don't have any additional changes to the repository content - we already committed our only changes. However, you will also see that it says "Your branch is ahead of 'origin/main' by 1 commit". We'll talk about that later.
 
-You have now made a commit and recorded your changes with Git! Close this issue and move on to the next one.
+You have now made a commit and recorded your changes with Git! Go ahead and move on to the next section.
 
 </details>
 
@@ -116,7 +113,7 @@ Practice makes perfect - let's make a second commit to our local repo.
 1. Run `git commit -m "add dryvilles-first-water-works section"` to make a second commit.
 1. Run `git status` again. We should be back to where we started. There is "nothing to commit" because we don't have any additional changes to the repository content - we already committed our changes. However, you will now see that it says "Your branch is ahead of 'origin/main' by 2 commits". We'll talk about that next.
 
-You have now made two commits and recorded your changes with Git! Close this issue and move on to the next one.
+You have now made two commits and recorded your changes with Git! Head to the next section.
 
 </details>
 
@@ -137,7 +134,7 @@ At this point, we have made our file changes and are satisfied with the state of
 
 ![image](https://github.com/CUAHSI/learning-gitflows-template/assets/13220910/6d19c388-6332-486b-b82e-3c8794a79f5e)
 
-You have pushed your changes up to GitHub! Close this issue and move on to the next one.
+You have pushed your changes up to GitHub! Carry on to the next section.
 
 </details>
 
@@ -163,7 +160,7 @@ For now, we will discuss how to open a pull request.
 5. Once you add a title and description, click the cog next to the `Reviewers` feature on the right bar and select your course contact as the reviewer from the drop-down menu. **Note - if you do not have the option to add a reviewer, do step 6 and then add the reviewer after.** You may not have the correct permissions to add a reviewer and should reach out to your course contact.
 6. Now you are ready - click "Create pull request"
 
-You have now successfully created a PR! Wait for your PR to be reviewed and merged. Once your PR has been merged, close this issue and move on to the next one.
+You have now successfully created a PR! Wait for your PR to be reviewed and merged. Once your PR has been merged, start on the next section.
 
 </details>
 
@@ -185,7 +182,7 @@ Merging a PR creates a commit on the canonical repository. Even though the most 
 1. Just like we did earlier, we can push our local changes to our fork by running `git push` (or `git push origin main` to be explicit).
 1. Now when you run `git status`, you should see that everything is up-to-date and there is nothing to commit. 
 
-You have successfully closed the loop after your PR was merged! Close this issue and move to the next one.
+You have successfully closed the loop after your PR was merged! There's still more to learn - on to the next part!
 
 </details>
 
@@ -206,7 +203,7 @@ Scenario: After your content was merged, a collaborator tells you that they adde
 1. Next, pull their changes down using `git pull upstream main`. Remember, the "canonical repository" is referred to as the "upstream" remote in git commands.
 1. Now when you open your `dryville_story.md` file locally, you should see the "Be Gone, Dirty Water" section is the last in the file. 
 
-Great! You successfully pulled down contributions that someone else on your team made to the repository. Next, we will add another section. Close this issue and move to the next one.
+Great! You successfully pulled down contributions that someone else on your team made to the repository. Next, we will add another section. 
 
 </details>
 
@@ -231,7 +228,7 @@ Time to add on to this story. We've done this a couple times now, so the edit-sa
 1. Run `git commit -m "add storing-water-for-a-rainy-day section"` to make a commit.
 1. Now `git status` shows that we are ahead of `origin/main` by 3 commits.
 
-You have now made two new commits. Close this issue and move on to the next one.
+You have now made two new commits. 
 
 </details>
 
@@ -250,7 +247,7 @@ We just made two commits that added two new sections of the story to our `dryvil
 1. Next, pull their changes down using `git pull upstream main`. 
 1. Uh oh, there seems to be an issue. When we pulled down those changes, the message "CONFLICT (content): Merge conflict in dryville_story.md" appeared. We must have been editing the same line of the file as our collaborator.
 
-Your first merge conflict! Everything will be OK, promise :) Close this issue and move on to the next one.
+Your first merge conflict! Everything will be OK, promise :) 
 
 </details>
 
@@ -295,7 +292,7 @@ You start thinking... a reservoir (you can call it a lake) above town could real
 10. The last step for resolving a merge confict is to commit your changes. Follow the same pattern as before. Running `git status` will show you that you have an unresolved merge conflict. Just as before, run `git add dryville_story.md` to stage your changed file. Then commit by running `git commit -m "resolve merge conflict"`. 
 11. Now, when you run `git status` you will see that you don't have any changes to commit (but your branch is still ahead of `origin/main` - which is fine and will be addressed next).
 
-You successfully resolved a conflict! Close this issue and move on to the next one.
+You successfully resolved a conflict! Continue the course in the next section.
 
 </details>
 
@@ -319,7 +316,7 @@ We are now ready to push our local changes (including the resolved merge conflic
 1. Once you add a title and description, click the cog next to the `Reviewers` feature on the right bar and select your course contact as the reviewer from the drop-down menu. If you do not have the option to add a reviewer, do step 9 and then add the reviewer after.
 1. Now, click "Create pull request".
 
-You have successfully made a second pull request! Wait for your PR to be reviewed and merged. Once your PR has been merged, close this issue and move on to the next one.
+You have successfully made a second pull request! Wait for your PR to be reviewed and merged. Once your PR has been merged, read the next section.
 
 </details>
 
@@ -341,7 +338,7 @@ Merging a PR creates a commit on the canonical repository. Even though the most 
 1. Just like we did earlier, we can push our local changes to our fork by running `git push` (or `git push origin main` to be explicit).
 1. Now when you run `git status`, you should see that everything is up-to-date and there is nothing to commit. 
 
-You have once again closed the loop after your PR was merged! Close this issue and move to the next one.
+You have once again closed the loop after your PR was merged! We are almost done - head to the next section to learn about our last new topic.
 
 </details>
 
@@ -369,7 +366,7 @@ git push origin main
 ```
 8. Finally, create a pull request. Make sure to add your course contact as a reviewer of your PR and reference this issue using `#[issue number]`. Revisit the step "Request to add your changes to the canonical repo" if you need any reminders for how to do this.
 
-Once you open your PR, wait for it to be reviewed and merged. Once your PR has been merged, close this issue and go to the next one.
+Once you open your PR, wait for it to be reviewed and merged. Once your PR has been merged, you can read the final section.
 
 </details>
 
@@ -378,7 +375,7 @@ Once you open your PR, wait for it to be reviewed and merged. Once your PR has b
 <details>
 <summary><h2>In conclusion ...</h2></summary>
 
-Welcome to the end of the hands on tutorial with Git and GitHub! You have now been exposed and practiced the basic workflow that is common for collaborating on codebases in open science. See the bottom of this issue for instructions about next steps.
+Welcome to the end of the hands on tutorial with Git and GitHub! You have now been exposed and practiced the basic workflow that is common for collaborating on codebases in open science. Below summarizes what you have learned and at the very bottom, directs you to future resources on your journey to become a Git and collaborative coding expert!
 
 ## The conceptual diagram of the workflow you just learned/used 
 
@@ -430,16 +427,6 @@ There is a lot more Git that can be learned, but the above are the basics that w
 * Temporarily hiding changes in order to pull upstream changes to avoid conflicts (`git stash`, `git stash apply`),
 * branching (`git switch -c`, `git checkout`), and
 * [much more](https://git-scm.com/doc)!
-
-----
-**Action:** Once you are done reading this, close this issue and return to the canonical repo's main GitHub page `https://github.com/USGS-R/ds-gitflows-[username]`.
-
-</details>
-
-<details>
-<summary><h2>One last thing...</h2></summary>
-
-![Minions Bob, Stuart, and Kevin expressing jubilation](archive/img/81443707-86452d80-913b-11ea-9ad4-7be24ff64c39.gif)
 
 Congratulations - you completed the tutorial!
 
