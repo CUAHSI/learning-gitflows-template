@@ -376,7 +376,7 @@ Once you open your PR, wait for it to be reviewed and merged. Once your PR has b
 <details>
 <summary><h2>In conclusion ...</h2></summary>
 
-Welcome to the end of the hands on tutorial with Git and GitHub! You have now been exposed and practiced the basic workflow that is common for collaborating on codebases in open science. Below summarizes what you have learned and at the very bottom, directs you to future resources on your journey to become a Git and collaborative coding expert!
+Welcome to the end of the hands on tutorial with Git and GitHub! You have now been exposed and practiced the basic workflow that is common for collaborating on codebases in open science. Below is a summary of all the concepts you learn. Feel free to screenshot/copy/bookmark that section to use as a reference in the future. At the very end of this section, we share resources that you may be interested in exploring later as you embark on your journey to become a Git and collaborative coding expert!
 
 ## The conceptual diagram of the workflow you just learned/used 
 
