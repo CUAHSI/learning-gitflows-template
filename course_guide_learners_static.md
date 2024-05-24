@@ -53,7 +53,7 @@ INSERT ISSUE 3!
 <details>
 <summary><h2>Link your clone to the canonical repo</h2></summary>
 
-We refer to online versions of GitHub repositories as "remotes". If you open Git Bash to your project directory (you may need to `cd learning-gitflows-[username]` from the end of the last issue) and run `git remote -v`, you will see a list of remotes and their URLs that are currently associated with your local copy. Currently, you have one remote - your fork of the repository - though you will see both a fetch and push option for it. It is referred to as the `origin` because your local copy *originated* from it. 
+We refer to online versions of GitHub repositories as "remotes". If you open Git Bash to your project directory (you may need to `cd learning-gitflows-[username]` from the end of the last section) and run `git remote -v`, you will see a list of remotes and their URLs that are currently associated with your local copy. Currently, you have one remote - your fork of the repository - though you will see both a fetch and push option for it. It is referred to as the `origin` because your local copy *originated* from it. 
 
 What we need to do now is link the canonical repository to your local copy. This closes the loop and enables you to pull down changes that collaborators have merged to the main repo into your local version. We refer to the online canonical version as the `upstream` repo and it is a `remote` because it is online.
 
@@ -156,7 +156,7 @@ For now, we will discuss how to open a pull request.
 
 2. Before your pull request is actually created, you should verify that you are requesting the correct changes be merged with the correct repository. For now, we are not working with branches, so don't worry about the fields that say "main". However, you should verify that the `base repository` is set to the project canonical repo (`[org]/learning-gitflows-[username]` in this case) and that the `head repository` is set to your fork (`[username]/learning-gitflows-[username]`). You also need to verify the commits lists. It should list the two that you just created.
 3. When you have checked those things, you can click the green "Create pull request" button.
-4. You still haven't made the pull request yet - one more step. You now need to title your pull request and add a description about your changes. I believe this was discussed earlier but if you need a refresher, [here is an article about some common best practices when it comes to PRs](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests). In your description, make sure to reference this issue by typing `#[issue number]`. 
+4. You still haven't made the pull request yet - one more step. You now need to title your pull request and add a description about your changes. I believe this was discussed earlier but if you need a refresher, [here is an article about some common best practices when it comes to PRs](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests).
 5. Once you add a title and description, click the cog next to the `Reviewers` feature on the right bar and select your course contact as the reviewer from the drop-down menu. **Note - if you do not have the option to add a reviewer, do step 6 and then add the reviewer after.** You may not have the correct permissions to add a reviewer and should reach out to your course contact.
 6. Now you are ready - click "Create pull request"
 
@@ -182,7 +182,7 @@ Merging a PR creates a commit on the canonical repository. Even though the most 
 1. Just like we did earlier, we can push our local changes to our fork by running `git push` (or `git push origin main` to be explicit).
 1. Now when you run `git status`, you should see that everything is up-to-date and there is nothing to commit. 
 
-You have successfully closed the loop after your PR was merged! There's still more to learn - on to the next part!
+You have successfully closed the loop after your PR was merged! Before you go on to the next section, your instructor will need to take an action. Ping them to get them to do it (e.g. `Hey [course instructor], I just finished step 9 where I closed the loop between the main repo and my local copy!`), and wait until after they have confirmed things are ready before you move on to the next section.
 
 </details>
 
@@ -196,7 +196,7 @@ Scenario: After your content was merged, a collaborator tells you that they adde
 ----
 **Action:** Pull down a collaborator's contributions to the canonical repository. 
 
-1. First, verify that you did indeed close the loop after merging your PR (see previous section), and that you closed the previous issue.
+1. First, verify that you did indeed close the loop after merging your PR (see previous section).
 1. Now, visit that canonical repository on GitHub and look at the commits (go to `https://github.com/[org]/learning-gitflows-[username]` and click on "X commits" just below the green `<> Code` button). You should see a new commit that was not created by you. 
 1. Click on the commit name to see what changes were made. Looks like your collaborator added the next section of the story! 
 1. Our goal is to continue this work and add another section but first, we need to get our collaborator's changes locally. Before pulling down changes, verify that you don't have any uncommitted changes locally. Run `git status` and look for the phrase, "nothing to commit". If that does not appear, go back to step 1 in this list.
@@ -217,6 +217,7 @@ Time to add on to this story. We've done this a couple times now, so the edit-sa
 ----
 **Action:** Add text for the next two sections and commit those changes.
 
+1. *Ping your instructor and let them know that you have arrived at this step. There is something that they need to do.*
 1. If you run `git status` in Git Bash  right now, you should see a message that says "nothing to commit" and also "Your branch is ahead of 'origin/main' by 1 commit" (that one commit is the one from your collaborator that has not yet been pushed to your fork). 
 1. Open the `dryville_story.md` file on your computer and add the next section of [the story](https://www.usgs.gov/special-topic/water-science-school/science/story-water-dryville), which is called "Your First Flood". Keep the same formatting as before (`##` for the title, `[inline text](url)` for hyperlinks). Save the file.
 1. If you run `git status` in Git Bash, you should see the words "modified: dryville_story.md". This means that Git detects your change. You will also see the words "no changes added to commit". This is because we still need to stage our changes. Note that you will still see "Your branch is ahead of 'origin/main' by 1 commit" - we still haven't pushed since we pulled down our collaborator's changes.
@@ -228,7 +229,7 @@ Time to add on to this story. We've done this a couple times now, so the edit-sa
 1. Run `git commit -m "add storing-water-for-a-rainy-day section"` to make a commit.
 1. Now `git status` shows that we are ahead of `origin/main` by 3 commits.
 
-You have now made two new commits. 
+You have now made two new commits. There's still more to learn - on to the next part!
 
 </details>
 
@@ -242,7 +243,7 @@ We just made two commits that added two new sections of the story to our `dryvil
 ----
 **Action:** Pull down your collaborator's most recent additions. 
 
-1. First, verify that you did indeed close the previous issue.
+1. Do not proceed with this step until your instructor has verified that it's OK to go on! (You pinged them in the last step, remember?)
 1. Before pulling down changes, verify that you don't have any uncommitted changes locally. Run `git status` and look for the phrase, "nothing to commit".
 1. Next, pull their changes down using `git pull upstream main`. 
 1. Uh oh, there seems to be an issue. When we pulled down those changes, the message "CONFLICT (content): Merge conflict in dryville_story.md" appeared. We must have been editing the same line of the file as our collaborator.
@@ -312,7 +313,7 @@ We are now ready to push our local changes (including the resolved merge conflic
 1. Now, click the "Code" tab to go back to your fork's home page. At the top, click the "New pull request button".
 1. Before your pull request is actually created, you need to verify that you are requesting the correct changes be merged with the correct repository. Remember, we are not working with branches, so don't worry about the fields that say "main". However, you should verify that the `base repository` is set to the project canonical repo (`[org]/learning-gitflows-[username]`) and that the `head repository` is set to your fork (`[username]/learning-gitflows-[username]`).
 1. After verifying, click the green "Create pull request" button.
-1. Add a title to your pull request and a description about your changes. In your description, make sure to reference this issue by typing `#[issue number]`. 
+1. Add a title to your pull request and a description about your changes.
 1. Once you add a title and description, click the cog next to the `Reviewers` feature on the right bar and select your course contact as the reviewer from the drop-down menu. If you do not have the option to add a reviewer, do step 9 and then add the reviewer after.
 1. Now, click "Create pull request".
 
@@ -364,7 +365,7 @@ git add .gitignore
 git commit -m "add downloaded image to gitignore"
 git push origin main
 ```
-8. Finally, create a pull request. Make sure to add your course contact as a reviewer of your PR and reference this issue using `#[issue number]`. Revisit the step "Request to add your changes to the canonical repo" if you need any reminders for how to do this.
+8. Finally, create a pull request. Make sure to add your course contact as a reviewer of your PR. Revisit the step "Request to add your changes to the canonical repo" if you need any reminders for how to do this.
 
 Once you open your PR, wait for it to be reviewed and merged. Once your PR has been merged, you can read the final section.
 
@@ -407,7 +408,7 @@ Welcome to the end of the hands on tutorial with Git and GitHub! You have now be
 1. Once you have changes on your fork that make it different from the canonical repository, go to your fork's GitHub page and click "New pull request". 
 1. In the next screen, verify that the `base` repository shows the canonical and the `head` repository shows your fork. 
 1. Click "Create pull request".
-1. Add a title and description. Include a reviewer. If the PR addresses specific issues in your GitHub repo, link to them by adding `#[issue number]` in your description.
+1. Add a title and description. Include a reviewer. If the PR addresses specific [issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) in your GitHub repo, link to them by adding `#[issue number]` in your description.
 1. The reviewer will approve/merge the changes.
 1. Close the loop by pulling down the changes from upstream to your local repo - `git pull upstream main`
 
