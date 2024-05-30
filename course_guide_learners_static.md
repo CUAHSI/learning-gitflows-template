@@ -202,7 +202,7 @@ Merging a PR creates a commit on the canonical repository. Even though the most 
 1. Just like we did earlier, we can push our local changes to our fork by running `git push` (or `git push origin main` to be explicit).
 1. Now when you run `git status`, you should see that everything is up-to-date and there is nothing to commit. 
 
-You have successfully closed the loop after your PR was merged! **Before you go on to the next section, your instructor will need to take an action. Ping them to get them to do it** (maybe something like `Hey [course instructor], I just finished step 9 where I closed the loop between the main repo and my local copy!`), and wait until after they have confirmed things are ready before you move on to the next section.
+You have successfully closed the loop after your PR was merged! <span style="color: red; font-weight: bold;">Before you go on to the next section, your instructor will need to take an action. Ping them to get them to do it</span> (maybe something like `Hey [course instructor], I just finished step 9 where I closed the loop between the main repo and my local copy!`), and wait until after they have confirmed things are ready before you move on to the next section.
 
 </details>
 
@@ -237,7 +237,7 @@ Time to add on to this story. We've done this a couple times now, so the edit-sa
 ----
 **Action:** Add text for the next two sections and commit those changes.
 
-1. **Ping your instructor and let them know that you have arrived at this step. There is something that they need to do.**
+1. <span style="color: red; font-weight: bold;">Ping your instructor and let them know that you have arrived at this step. There is something that they need to do.</span>
 1. If you run `git status` in Git Bash  right now, you should see a message that says "nothing to commit" and also "Your branch is ahead of 'origin/main' by 1 commit" (that one commit is the one from your collaborator that has not yet been pushed to your fork). 
 1. Open the `dryville_story.md` file on your computer and add the next section of [the story](https://www.usgs.gov/special-topic/water-science-school/science/story-water-dryville), which is called "Your First Flood". Keep the same formatting as before (`##` for the title, `[inline text](url)` for hyperlinks). Save the file.
 1. If you run `git status` in Git Bash, you should see the words "modified: dryville_story.md". This means that Git detects your change. You will also see the words "no changes added to commit". This is because we still need to stage our changes. Note that you will still see "Your branch is ahead of 'origin/main' by 1 commit" - we still haven't pushed since we pulled down our collaborator's changes.
