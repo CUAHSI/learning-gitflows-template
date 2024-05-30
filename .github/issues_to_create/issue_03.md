@@ -11,7 +11,7 @@ The next step in our workflow is to clone your fork. This creates a local copy o
 
 ![image](https://github.com/CUAHSI/learning-gitflows-template/assets/13220910/03273273-ebc7-4d7f-955c-dfaedf68edaa)
 
-4. Open the command line (Windows --> Command Prompt, Mac or Linux --> Terminal). Note that 'Git Bash' is also used to refer to the command line in this training.
+4. Open the command line (Windows --> Command Prompt, Mac or Linux --> Terminal). We will instruct you to use specific commands but if you want an overview, [this is a good resource](https://www.g2.com/articles/command-line-interface#cli-vs-gui). Note that the term 'Git Bash' is also used to refer to the command line in this training.
 5. Change the working directory ([use `cd`](https://stackoverflow.com/questions/17753986/how-to-change-directory-using-windows-command-line)) to the location where you would like to create the cloned directory (see step 1 in snapshot of command prompt). I would recommend creating a folder somewhere in your D drive to put GitHub projects.
 6. Type `git clone [insert URL]` and hit enter (step 2 in snapshot of command prompt), e.g. `git clone git@github.com:[username]/learning-gitflows-[username].git`. Note that you cannot CTRL+V to paste into Git Bash. Right click and choose paste instead.
 7. A new folder with the same name as the repository is now available in your working directory. In the folder, you will find the same files and file structure that you can see on GitHub (step 3 and 4 in snapshot of command prompt; use the command `dir` to inspect the folder contents).
