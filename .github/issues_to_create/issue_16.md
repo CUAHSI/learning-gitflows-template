@@ -3,7 +3,7 @@ The last topic we are going to cover in this tutorial is the `.gitignore` file. 
 ----
 **Action:** Add a file and then gitignore it.
 
-1. First, open the `.gitignore` file that is in your local directory using a text editor (for example, Notepad++). It should be completely empty.
+1. First, open the `.gitignore` file that is in your local directory using a text editor (for example, Notepad++). It should be completely empty. If you don't see this file, try changing your settings so that you can see hidden files. On Mac, run `Command + Shift + .` to reveal them. On Windows, click `View > Show > Hidden items` in the File Explorer.
 1. Next, download [this image](https://www.usgs.gov/media/images/icon-teaching) (right click and choose "Save image as") and save as `wss-icon-small-teacher.png` in your `learning-gitflows-[username]` folder on your computer. 
 1. Now in Git Bash, run `ls` to "list" the items in your current working directory. You should see the following: `dryville_story.md`, `README.md` and `wss-icon-small-teacher.png`. Note that the `.gitignore` file doesn't show up with `ls` because it is technically a "hidden" file (starts with a `.`).
 1. So, you've added a new file to your repository. Now, run `git status`. Git shows that `wss-icon-small-teacher.png` is an untracked file. We could leave it like that and just try to remember to not commit it, but that seems risky. The more foolproof way is to to add it to the `.gitignore` file.  

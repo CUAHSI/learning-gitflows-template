@@ -71,7 +71,7 @@ To actually start the course, you will need to send each participant their indiv
 > 1. Login to your GitHub account.
 > 1. Accept the invitation to be a collaborator on your new repo if you haven't already.
 > 1. Navigate to the main repository for your course: [INSERT LINK]. We will often refer to this link as `www.github.com/[org]/learning-gitflows-[username]` throughout the course.
-> 1. Open the file `course_instructions.md` and follow along with what it says to do. Consider opening a new tab or window so that you can easily flip back-and-forth between the instructions and the activities.
+> 1. Open the file `course_guide.md` and follow along with what it says to do. Consider opening a new tab or window so that you can easily flip back-and-forth between the instructions and the activities.
 > 
 > There will be specific times throughout the course that you need to tag me, your course contact. When you do this, you will need to use my GitHub user account: `[ YOUR GITHUB USER ]`.
 > 
