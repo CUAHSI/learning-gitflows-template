@@ -1,5 +1,5 @@
 <details>
-<summary><h2>How to start working on a new project</h2></summary>
+<summary><h2>1. How to start working on a new project</h2></summary>
 
 Scenario: You are pointed to a code repository on GitHub (this one) for a project that you just joined. You need to start contributing to this codebase. Where do you start? 
 
@@ -20,7 +20,7 @@ We are going to walk through each of these steps within the workflow in this les
 <hr>
 
 <details>
-<summary><h2>Create a copy of the main repository (fork)</h2></summary>
+<summary><h2>2. Create a copy of the main repository (fork)</h2></summary>
 
 The first step in our workflow when working on a new project is to fork the canonical repository. This creates a copy of the repository that is specific to your user on GitHub. Everyone that is working on the project has their own fork of the repository where they can safely make changes without impacting the main code or other contributor's code.
 
@@ -42,7 +42,7 @@ Congratulations! You've made your own copy of the main repository. Now on to the
 <hr>
 
 <details>
-<summary><h2>Create a local copy (clone)</h2></summary>
+<summary><h2>3. Create a local copy (clone)</h2></summary>
 
 The next step in our workflow is to clone your fork. This creates a local copy of the repository that is specific to your user on GitHub. The local copy is where you will make changes to the codebase. 
 
@@ -57,21 +57,21 @@ The next step in our workflow is to clone your fork. This creates a local copy o
 
 ![image](https://github.com/CUAHSI/learning-gitflows-template/assets/13220910/03273273-ebc7-4d7f-955c-dfaedf68edaa)
 
-4. Open the command line (Windows --> Command Prompt, Mac or Linux --> Terminal). Note that 'Git Bash' is also used to refer to the command line in this training.
+4. Open the command line (Windows --> Command Prompt, Mac or Linux --> Terminal). We will instruct you to use specific commands but if you want an overview, [this is a good resource](https://www.g2.com/articles/command-line-interface#cli-vs-gui). Note that the term 'Git Bash' is also used to refer to the command line in this training.
 5. Change the working directory ([use `cd`](https://stackoverflow.com/questions/17753986/how-to-change-directory-using-windows-command-line)) to the location where you would like to create the cloned directory (see step 1 in snapshot of command prompt). I would recommend creating a folder somewhere in your D drive to put GitHub projects.
 6. Type `git clone [insert URL]` and hit enter (step 2 in snapshot of command prompt), e.g. `git clone git@github.com:[username]/learning-gitflows-[username].git`. Note that you cannot CTRL+V to paste into Git Bash. Right click and choose paste instead.
-7. A new folder with the same name as the repository is now available in your working directory. In the folder, you will find the same files and file structure that you can see on GitHub (step 3 and 4 in snapshot of command prompt; use the command `dir` to inspect the folder contents).
-8. While in the folder, run the command 'git config pull.rebase false'. This will keep a confusing error message from arising later on.
+7. A new folder with the same name as the repository is now available in your working directory. Verify that you are in this folder by running `pwd` (or "print working directory") in the command line. You should see a file path ending with `learning-gitflows-[username]`. If you do not, try running `cd learning-gitflows-[username]` or other combinations of `cd` to "change directories" and navigate to that folder.
+8. In the folder, you will find the same files and file structure that you can see on GitHub (step 3 and 4 in snapshot of command prompt; use the command `ls` or `dir` depending on your operating system to inspect the folder contents).
+9. The rest of your commands should be run within this folder, `learning-gitflows-[username]`. Run the command `git config pull.rebase false`. This will keep a confusing error message from arising later on.
 
-You have now successfully cloned your fork! Close this issue and move on to the next one.
-
+You have now successfully cloned your fork! Move to the next section.
 
 </details>
 
 <hr>
 
 <details>
-<summary><h2>Link your clone to the canonical repo</h2></summary>
+<summary><h2>4. Link your clone to the canonical repo</h2></summary>
 
 We refer to online versions of GitHub repositories as "remotes". If you open Git Bash to your project directory (you may need to `cd learning-gitflows-[username]` from the end of the last section) and run `git remote -v`, you will see a list of remotes and their URLs that are currently associated with your local copy. Currently, you have one remote - your fork of the repository - though you will see both a fetch and push option for it. It is referred to as the `origin` because your local copy *originated* from it. 
 
@@ -95,9 +95,9 @@ You have now set up your new project for collaborative development! We are ready
 <hr>
 
 <details>
-<summary><h2>Your first commit</h2></summary>
+<summary><h2>5. Your first commit</h2></summary>
 
-You are now ready to start contributing your own content to the project! Normally, you would be adding new files, editing lines of code, etc; however, to keep this tutorial programming language-agnostic, we will be editing text in a Markdown document. I think you have already learned about Markdown but if not, visit [this quick article](https://guides.github.com/features/mastering-markdown/) to learn about it.
+You are now ready to start contributing your own content to the project! Normally, you would be adding new files, editing lines of code, etc; however, to keep this tutorial programming language-agnostic, we will be editing text in a Markdown document. You may have already learned about Markdown but if not, visit [this quick article](https://guides.github.com/features/mastering-markdown/) to learn about it. In addition, we are going to start introducing a lot of new `git` commands. We will share the ones you need to know but [this is a helpful reference sheet](https://education.github.com/git-cheat-sheet-education.pdf) of other git commands!
 
 We will be using the `dryville_story.md` file to illustrate changes to a repository. First, you will make a change and then save it with Git.
 
@@ -105,10 +105,10 @@ We will be using the `dryville_story.md` file to illustrate changes to a reposit
 **Action:** Add text to the story and commit your change.
 
 1. Before we make any changes, let's check that we are starting from a clean slate. Run `git status` in Git Bash in your project directory. You should see a message that says "nothing to commit". This means that there are no changes on your local copy and it exactly matches the content on your remote fork (the `origin` repo). This is good!
-1. Now, open the `dryville_story.md` file on your computer. Any text editor will do, such as [Notepad++](https://notepad-plus-plus.org/downloads/). Currently, there is a title (denoted by `#`) and two sub-headers (denoted by `##`) with text. You can also see the syntax for hyperlinks, `[text that appears](link/to/the/website)`. To see how this syntax is rendered on GitHub, open the `dryville_story.md` file on GitHub by going to the main repo (`https://github.com/[org]/learning-gitflows-[username]`) and clicking the file name.
+1. Now, open the `dryville_story.md` file locally on your computer in a text editor. Any text editor will do, such as [Notepad++](https://notepad-plus-plus.org/downloads/) or TextEdit on Macs. Currently, there is a title (denoted by `#`) and two sub-headers (denoted by `##`) with text. You can also see the syntax for hyperlinks, `[text that appears](link/to/the/website)`. To see how this syntax is rendered on GitHub, open the `dryville_story.md` file on GitHub by going to the main repo (`https://github.com/[org]/learning-gitflows-[username]`) and clicking the file name.
 1. Now, we will add the next section of the story (we are recreating the story available [here on the USGS Water Science School](https://www.usgs.gov/special-topic/water-science-school/science/story-water-dryville)). Open that link. The next section in the story that we don't have in our file yet is called "Getting Water to Your Homes". Add the title (use `##`), the body text, and the appropriate link for the words "over 8 pounds a gallon" to the `dryville_story.md` file locally. Save the file.
 1. Now, we have made a change in our local repo. If you run `git status` in Git Bash, you should see the words "modified: dryville_story.md". This means that Git detects a new change. At this point, you could run `git diff` to visually see the changes you made: red = original, green = changed (if you do this and see a `:` at the bottom of your bash window, type `q` to get out of the diff view before proceeding). You will also see the words "no changes added to commit". This is because we have not told Git to record these changes; we have not "staged" them. 
-1. We now need to stage these changes so that they can be included in our commit. To stage our changes, run `git add dryville_story.md`. Now when you run `git status`, you see that the "modified: dryville_story.md" change is listed under "Changes to be committed". We are now ready to make a commit.
+1. We now need to stage these changes so that they can be included in our commit. To stage our changes, run `git add dryville_story.md`. Now when you run `git status`, you see that the "modified: dryville_story.md" change is listed under "Changes to be committed". We are now ready to make a commit. A commit is really just a way to click "save" on a certain change or set of changes and give them a description (read more [here](https://www.w3schools.com/git/git_commit.asp)). 
 1. To make a commit, run `git commit -m "[insert your message here]"`. For this change, we will run `git commit -m "add getting-water-to-your-homes section"`. Any change that was listed under the "Changes to be committed" section when we ran `git status` will be included in this commit.
 1. Run `git status` again. We should be back to where we started. There is "nothing to commit" because we don't have any additional changes to the repository content - we already committed our only changes. However, you will also see that it says "Your branch is ahead of 'origin/main' by 1 commit". We'll talk about that later.
 
@@ -119,7 +119,7 @@ You have now made a commit and recorded your changes with Git! Go ahead and move
 <hr>
 
 <details>
-<summary><h2>Make a second commit for practice</h2></summary>
+<summary><h2>6. Make a second commit for practice</h2></summary>
 
 Practice makes perfect - let's make a second commit to our local repo.
 
@@ -140,7 +140,7 @@ You have now made two commits and recorded your changes with Git! Head to the ne
 <hr>
 
 <details>
-<summary><h2>Move your local changes to your online repo</h2></summary>
+<summary><h2>7. Move your local changes to your online repo</h2></summary>
 
 At this point, we have made our file changes and are satisfied with the state of our local repository. It is time to join these changes with the main repository so that our collaborators can use them. Before we can merge our changes with the main repository, we need to get our local changes onto our fork on GitHub.
 
@@ -148,6 +148,7 @@ At this point, we have made our file changes and are satisfied with the state of
 **Action:** Push your changes to your GitHub fork. 
 
 1. If you run `git status` in Git Bash  right now, you should see a message that says "nothing to commit" and also "Your branch is ahead of 'origin/main' by 2 commits". This means that our local version has 2 new changes that do not appear in our remote fork (called the `origin` because our local version *originated* from it). 
+1. Go to your fork's webpage (`https://github.com/[username]/learning-gitflows-[username]`) and click on the `X commits` button (see image below). At this time, you should only see commits that occurred before you started working on the repository (instructors prepped the repo by making commits).
 1. To get our local changes to appear on our remote fork, we need to "push" them there. To do so, run `git push`. By default, it will push changes up to the `origin` remote `main` branch (we aren't using branching just yet, so everything is the `main` branch). If you want to be more explicit, you can run `git push [remote name] [branch name]`. For example, `git push origin main` will do the same as `git push`.
 1. After you run this successfully, you will see `To github.com:[username]/learning-gitflows-[username].git` near the bottom. It is telling you where those changes went, which is to your remote fork. Yay!
 1. Go to your fork's webpage (`https://github.com/[username]/learning-gitflows-[username]`) and click on the `X commits` button (see image below). You should see your two commit messages appear there.
@@ -161,9 +162,9 @@ You have pushed your changes up to GitHub! Carry on to the next section.
 <hr>
 
 <details>
-<summary><h2>Request to add your changes to the canonical repo</h2></summary>
+<summary><h2>8. Request to add your changes to the canonical repo</h2></summary>
 
-With the new changes on your fork, your are now ready to create a pull request (PR). A PR bundles all of your commits together and *requests* that they be *pulled* into the canonical repository. When a PR is opened, you typically request that a collaborator review your changes. They can look at your PR and examine how the sum of all of your commits differ from the existing canonical repo. They can make suggestions for revisions to specific lines and ask for changes before they merge your contributions into the main repo. 
+With the new changes on your fork, you are now ready to create a pull request (PR). A PR bundles all of your commits together and *requests* that they be *pulled* into the canonical repository. When a PR is opened, you typically request that a collaborator review your changes. They can look at your PR and examine how the sum of all of your commits differ from the existing canonical repo. They can make suggestions for revisions to specific lines and ask for changes before they merge your contributions into the main repo. 
 
 For now, we will discuss how to open a pull request.
 
@@ -176,7 +177,7 @@ For now, we will discuss how to open a pull request.
 
 2. Before your pull request is actually created, you should verify that you are requesting the correct changes be merged with the correct repository. For now, we are not working with branches, so don't worry about the fields that say "main". However, you should verify that the `base repository` is set to the project canonical repo (`[org]/learning-gitflows-[username]` in this case) and that the `head repository` is set to your fork (`[username]/learning-gitflows-[username]`). You also need to verify the commits lists. It should list the two that you just created.
 3. When you have checked those things, you can click the green "Create pull request" button.
-4. You still haven't made the pull request yet - one more step. You now need to title your pull request and add a description about your changes. I believe this was discussed earlier but if you need a refresher, [here is an article about some common best practices when it comes to PRs](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests).
+4. You still haven't made the pull request yet - one more step. You now need to title your pull request and add a description about your changes. [Here is an article about some common best practices when it comes to PRs](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests). In your description, make sure to reference this issue by typing `#[issue number]`. 
 5. Once you add a title and description, click the cog next to the `Reviewers` feature on the right bar and select your course contact as the reviewer from the drop-down menu. **Note - if you do not have the option to add a reviewer, do step 6 and then add the reviewer after.** You may not have the correct permissions to add a reviewer and should reach out to your course contact.
 6. Now you are ready - click "Create pull request"
 
@@ -187,16 +188,18 @@ You have now successfully created a PR! Wait for your PR to be reviewed and merg
 <hr>
 
 <details>
-<summary><h2>Closing the loop</h2></summary>
+<summary><h2>9. Closing the loop</h2></summary>
 
 Congratulations - your PR was merged and you have successfully changed the canonical repository. You are almost a Git Pro! 
 
-Merging a PR creates a commit on the canonical repository. Even though the most recent changes were your additions, technically your fork and local repository do not have that "merge" commit and are now out-of-date with the canonical repo. So, what we will do now is learn how to close the loop after your PR is merged.
+Merging a PR creates a commit on the canonical repository. Even though the most recent changes were your additions, technically your fork and local repository do not have that "merge" commit and are now out-of-date with the canonical repo. So, what we will do now is learn how to close the loop after your PR is merged. This step is represented in the image below by the arrow that goes from the `Upstream Repository` cloud down to the `User 1/2 Local Repository` computers in the image below (this is the same image we saw at the beginning of the training).
+
+![image](https://user-images.githubusercontent.com/13220910/155410782-77ba4334-9253-4e1e-a5f0-ac779569fc6d.png)
 
 ----
 **Action:** Close the loop. 
 
-1. Open Git Bash and make sure you are in your project's directory (reminder: use `cd`).
+1. Open Git Bash and make sure you are in your project's directory. Reminder: use `pwd` to see where you are and if you don't see `learning-gitflows-[username]` as the final part of the path, then you will need to use `cd` to navigate to that project directory.
 1. Pull down changes from the canonical repository (aka the "upstream" remote) by running `git pull upstream main`.
 1. We now have changes locally that do not appear on our fork (aka the "origin" remote). So if we run `git status`, we get the message "Your branch is ahead of 'origin/main' by X commits".
 1. Just like we did earlier, we can push our local changes to our fork by running `git push` (or `git push origin main` to be explicit).
@@ -209,7 +212,7 @@ You have successfully closed the loop after your PR was merged! **Before you go 
 <hr>
 
 <details>
-<summary><h2>Get a collaborator's content locally</h2></summary>
+<summary><h2>10. Get a collaborator's content locally</h2></summary>
 
 Scenario: After your content was merged, a collaborator tells you that they added additional content. You want to keep working, but you don't want to duplicate anything they did. You now need to pull in their content to your local repository before you continue working. Don't worry, we have done this before. We just need to pull down any new changes from the canonical repository!
 
@@ -230,7 +233,7 @@ Great! You successfully pulled down contributions that someone else on your team
 <hr>
 
 <details>
-<summary><h2>Add two new sections of the story</h2></summary>
+<summary><h2>11. Add two new sections of the story</h2></summary>
 
 Time to add on to this story. We've done this a couple times now, so the edit-save-add-commit pattern should be getting familiar.
 
@@ -240,7 +243,7 @@ Time to add on to this story. We've done this a couple times now, so the edit-sa
 1. **Ping your instructor and let them know that you have arrived at this step. There is something that they need to do.**
 1. If you run `git status` in Git Bash  right now, you should see a message that says "nothing to commit" and also "Your branch is ahead of 'origin/main' by 1 commit" (that one commit is the one from your collaborator that has not yet been pushed to your fork). 
 1. Open the `dryville_story.md` file on your computer and add the next section of [the story](https://www.usgs.gov/special-topic/water-science-school/science/story-water-dryville), which is called "Your First Flood". Keep the same formatting as before (`##` for the title, `[inline text](url)` for hyperlinks). Save the file.
-1. If you run `git status` in Git Bash, you should see the words "modified: dryville_story.md". This means that Git detects your change. You will also see the words "no changes added to commit". This is because we still need to stage our changes. Note that you will still see "Your branch is ahead of 'origin/main' by 1 commit" - we still haven't pushed since we pulled down our collaborator's changes.
+1. If you run `git status` in Git Bash, you should see the words "modified: dryville_story.md". This means that Git detects your change. You will also see the words "no changes added to commit". This is because we still need to stage our changes. Note that you will still see "Your branch is ahead of 'origin/main' by 1 commit" - we still haven't pushed since we pulled down our collaborator's changes. At this point, you could also run `git diff` to visually see the changes you made: red = original, green = changed (if you do this and see a `:` at the bottom of your bash window, type `q` to get out of the diff view before proceeding). 
 1. Run `git add dryville_story.md` to stage these changes so that they can be included in our next commit. Now when you run `git status`, you see that the "modified: dryville_story.md" change is listed under "Changes to be committed". We are now ready to make a commit.
 1. Run `git commit -m "add your-first-flood section"` to make a commit.
 1. Run `git status` again. We should be back to where we started. There is "nothing to commit" because we don't have any additional changes to the repository content - we already committed our changes. However, you will now see that it says "Your branch is ahead of 'origin/main' by 2 commits".
@@ -256,7 +259,7 @@ You have now made two new commits. There's still more to learn - on to the next 
 <hr>
 
 <details>
-<summary><h2>Pull down more new changes from your collaborator</h2></summary>
+<summary><h2>12. Pull down more new changes from your collaborator</h2></summary>
 
 We just made two commits that added two new sections of the story to our `dryville_story.md` file. Huzzah! Everything is peachy. However, while you were doing that, your collaborator also decided to add to the story and they committed before you. Now, we need to once again pull down their changes before moving on.
 
@@ -275,7 +278,7 @@ Your first merge conflict! Everything will be OK, promise :)
 <hr>
 
 <details>
-<summary><h2>Conquer a merge conflict!</h2></summary>
+<summary><h2>13. Conquer a merge conflict!</h2></summary>
 
 In the last step, we pulled down changes from our collaborator and realized that there was a merge conflict. This occurs when you edit the same line of code. In this case, you both added on to the last line of the file. Don't worry - merge conflicts are not as intimidating as they may seem. Let's do this!
 
@@ -320,7 +323,7 @@ You successfully resolved a conflict! Continue the course in the next section.
 <hr>
 
 <details>
-<summary><h2>Request newest set of changes be merged to the canonical repo</h2></summary>
+<summary><h2>14. Request newest set of changes be merged to the canonical repo</h2></summary>
 
 We are now ready to push our local changes (including the resolved merge conflict) up to our fork (aka remote "origin"). Then, we can open a pull request (PR). 
 
@@ -330,7 +333,7 @@ We are now ready to push our local changes (including the resolved merge conflic
 1. If you run `git status` in Git Bash  right now, you should see a message that says "nothing to commit" and also "Your branch is ahead of 'origin/main' by X commits". Our local version has new changes that do not appear in our fork (aka the remote `origin` because our local version *originated* from it). 
 1. Just as before, we need to "push" our local changes to our remote fork. Run `git push origin main` to do so. 
 1. Go to **your fork's** webpage (`https://github.com/[username]/learning-gitflows-[username]`) and click on the `X commits` button (just below the green `<> Code` button). You should see your new commit messages appear there.
-1. Now, click the "Code" tab to go back to your fork's home page. At the top, click the "New pull request button".
+1. Now, click the "Code" tab to go back to your fork's home page. Near the top, you will see a "Contribute" button. Click that button, and then click "Open pull request".
 1. Before your pull request is actually created, you need to verify that you are requesting the correct changes be merged with the correct repository. Remember, we are not working with branches, so don't worry about the fields that say "main". However, you should verify that the `base repository` is set to the project canonical repo (`[org]/learning-gitflows-[username]`) and that the `head repository` is set to your fork (`[username]/learning-gitflows-[username]`).
 1. After verifying, click the green "Create pull request" button.
 1. Add a title to your pull request and a description about your changes.
@@ -344,7 +347,7 @@ You have successfully made a second pull request! Wait for your PR to be reviewe
 <hr>
 
 <details>
-<summary><h2>Close another loop after a merged MR</h2></summary>
+<summary><h2>15. Close another loop after a merged MR</h2></summary>
 
 Your PR was merged! Yay! Now, remember that "closing the loop" thing we did after our last PR was merged? Let's do it again.
 
@@ -366,14 +369,14 @@ You have once again closed the loop after your PR was merged! We are almost done
 <hr>
 
 <details>
-<summary><h2>Using a gitignore file</h2></summary>
+<summary><h2>16. Using a gitignore file</h2></summary>
 
 The last topic we are going to cover in this tutorial is the `.gitignore` file. These files are used when you have a local file that you don't want to track changes to in a commit or put on GitHub. You simply add the name of the file (including directory structure when applicable) to the `.gitignore` file to have Git *ignore* it (see what they did there?). This practice is often used for intermediate files created by processes within your repo, temporary files, or really large data that need to be stored elsewhere. Additional information about `.gitignore` files can be found in [this article](https://www.pluralsight.com/guides/how-to-use-gitignore-file).
 
 ----
 **Action:** Add a file and then gitignore it.
 
-1. First, open the `.gitignore` file that is in your local directory using a text editor (for example, Notepad++). It should be completely empty.
+1. First, open the `.gitignore` file that is in your local directory using a text editor (for example, Notepad++). It should be completely empty. If you don't see this file, try changing your settings so that you can see hidden files. On Mac, run `Command + Shift + .` to reveal them. On Windows, click `View > Show > Hidden items` in the File Explorer.
 1. Next, download [this image](https://www.usgs.gov/media/images/icon-teaching) (right click and choose "Save image as") and save as `wss-icon-small-teacher.png` in your `learning-gitflows-[username]` folder on your computer. 
 1. Now in Git Bash, run `ls` to "list" the items in your current working directory. You should see the following: `dryville_story.md`, `README.md` and `wss-icon-small-teacher.png`. Note that the `.gitignore` file doesn't show up with `ls` because it is technically a "hidden" file (starts with a `.`).
 1. So, you've added a new file to your repository. Now, run `git status`. Git shows that `wss-icon-small-teacher.png` is an untracked file. We could leave it like that and just try to remember to not commit it, but that seems risky. The more foolproof way is to to add it to the `.gitignore` file.  
@@ -394,7 +397,7 @@ Once you open your PR, wait for it to be reviewed and merged. Once your PR has b
 <hr>
 
 <details>
-<summary><h2>In conclusion ...</h2></summary>
+<summary><h2>17. In conclusion ...</h2></summary>
 
 Welcome to the end of the hands on tutorial with Git and GitHub! You have now been exposed and practiced the basic workflow that is common for collaborating on codebases in open science. Below is a summary of all the concepts you learn. Feel free to screenshot/copy/bookmark that section to use as a reference in the future. At the very end of this section, we share resources that you may be interested in exploring later as you embark on your journey to become a Git and collaborative coding expert!
 
