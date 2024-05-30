@@ -16,6 +16,6 @@ The next step in our workflow is to clone your fork. This creates a local copy o
 6. Type `git clone [insert URL]` and hit enter (step 2 in snapshot of command prompt), e.g. `git clone git@github.com:[username]/learning-gitflows-[username].git`. Note that you cannot CTRL+V to paste into Git Bash. Right click and choose paste instead.
 7. A new folder with the same name as the repository is now available in your working directory. Verify that you are in this folder by running `pwd` (or "print working directory") in the command line. You should see a file path ending with `learning-gitflows-[username]`. If you do not, try running `cd learning-gitflows-[username]` or other combinations of `cd` to "change directories" and navigate to that folder.
 8. In the folder, you will find the same files and file structure that you can see on GitHub (step 3 and 4 in snapshot of command prompt; use the command `ls` or `dir` depending on your operating system to inspect the folder contents).
-8. The rest of your commands should be run within this folder, `learning-gitflows-[username]`. Run the command `git config pull.rebase false`. This will keep a confusing error message from arising later on.
+9. The rest of your commands should be run within this folder, `learning-gitflows-[username]`. Run the command `git config pull.rebase false`. This will keep a confusing error message from arising later on.
 
 You have now successfully cloned your fork! Close this issue and move on to the next one.
