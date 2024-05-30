@@ -1,5 +1,5 @@
 <details>
-<summary><h2>How to start working on a new project</h2></summary>
+<summary><h2>1. How to start working on a new project</h2></summary>
 
 Scenario: You are pointed to a code repository on GitHub (this one) for a project that you just joined. You need to start contributing to this codebase. Where do you start? 
 
@@ -20,7 +20,7 @@ We are going to walk through each of these steps within the workflow in this les
 <hr>
 
 <details>
-<summary><h2>Create a copy of the main repository (fork)</h2></summary>
+<summary><h2>2. Create a copy of the main repository (fork)</h2></summary>
 
 The first step in our workflow when working on a new project is to fork the canonical repository. This creates a copy of the repository that is specific to your user on GitHub. Everyone that is working on the project has their own fork of the repository where they can safely make changes without impacting the main code or other contributor's code.
 
@@ -42,7 +42,7 @@ Congratulations! You've made your own copy of the main repository. Now on to the
 <hr>
 
 <details>
-<summary><h2>Create a local copy (clone)</h2></summary>
+<summary><h2>3. Create a local copy (clone)</h2></summary>
 
 The next step in our workflow is to clone your fork. This creates a local copy of the repository that is specific to your user on GitHub. The local copy is where you will make changes to the codebase. 
 
@@ -71,7 +71,7 @@ You have now successfully cloned your fork! Close this issue and move on to the 
 <hr>
 
 <details>
-<summary><h2>Link your clone to the canonical repo</h2></summary>
+<summary><h2>4. Link your clone to the canonical repo</h2></summary>
 
 We refer to online versions of GitHub repositories as "remotes". If you open Git Bash to your project directory (you may need to `cd learning-gitflows-[username]` from the end of the last section) and run `git remote -v`, you will see a list of remotes and their URLs that are currently associated with your local copy. Currently, you have one remote - your fork of the repository - though you will see both a fetch and push option for it. It is referred to as the `origin` because your local copy *originated* from it. 
 
@@ -95,7 +95,7 @@ You have now set up your new project for collaborative development! We are ready
 <hr>
 
 <details>
-<summary><h2>Your first commit</h2></summary>
+<summary><h2>5. Your first commit</h2></summary>
 
 You are now ready to start contributing your own content to the project! Normally, you would be adding new files, editing lines of code, etc; however, to keep this tutorial programming language-agnostic, we will be editing text in a Markdown document. I think you have already learned about Markdown but if not, visit [this quick article](https://guides.github.com/features/mastering-markdown/) to learn about it.
 
@@ -119,7 +119,7 @@ You have now made a commit and recorded your changes with Git! Go ahead and move
 <hr>
 
 <details>
-<summary><h2>Make a second commit for practice</h2></summary>
+<summary><h2>6. Make a second commit for practice</h2></summary>
 
 Practice makes perfect - let's make a second commit to our local repo.
 
@@ -140,7 +140,7 @@ You have now made two commits and recorded your changes with Git! Head to the ne
 <hr>
 
 <details>
-<summary><h2>Move your local changes to your online repo</h2></summary>
+<summary><h2>7. Move your local changes to your online repo</h2></summary>
 
 At this point, we have made our file changes and are satisfied with the state of our local repository. It is time to join these changes with the main repository so that our collaborators can use them. Before we can merge our changes with the main repository, we need to get our local changes onto our fork on GitHub.
 
@@ -161,7 +161,7 @@ You have pushed your changes up to GitHub! Carry on to the next section.
 <hr>
 
 <details>
-<summary><h2>Request to add your changes to the canonical repo</h2></summary>
+<summary><h2>8. Request to add your changes to the canonical repo</h2></summary>
 
 With the new changes on your fork, your are now ready to create a pull request (PR). A PR bundles all of your commits together and *requests* that they be *pulled* into the canonical repository. When a PR is opened, you typically request that a collaborator review your changes. They can look at your PR and examine how the sum of all of your commits differ from the existing canonical repo. They can make suggestions for revisions to specific lines and ask for changes before they merge your contributions into the main repo. 
 
@@ -187,7 +187,7 @@ You have now successfully created a PR! Wait for your PR to be reviewed and merg
 <hr>
 
 <details>
-<summary><h2>Closing the loop</h2></summary>
+<summary><h2>9. Closing the loop</h2></summary>
 
 Congratulations - your PR was merged and you have successfully changed the canonical repository. You are almost a Git Pro! 
 
@@ -209,7 +209,7 @@ You have successfully closed the loop after your PR was merged! **Before you go 
 <hr>
 
 <details>
-<summary><h2>Get a collaborator's content locally</h2></summary>
+<summary><h2>10. Get a collaborator's content locally</h2></summary>
 
 Scenario: After your content was merged, a collaborator tells you that they added additional content. You want to keep working, but you don't want to duplicate anything they did. You now need to pull in their content to your local repository before you continue working. Don't worry, we have done this before. We just need to pull down any new changes from the canonical repository!
 
@@ -230,7 +230,7 @@ Great! You successfully pulled down contributions that someone else on your team
 <hr>
 
 <details>
-<summary><h2>Add two new sections of the story</h2></summary>
+<summary><h2>11. Add two new sections of the story</h2></summary>
 
 Time to add on to this story. We've done this a couple times now, so the edit-save-add-commit pattern should be getting familiar.
 
@@ -256,7 +256,7 @@ You have now made two new commits. There's still more to learn - on to the next 
 <hr>
 
 <details>
-<summary><h2>Pull down more new changes from your collaborator</h2></summary>
+<summary><h2>12. Pull down more new changes from your collaborator</h2></summary>
 
 We just made two commits that added two new sections of the story to our `dryville_story.md` file. Huzzah! Everything is peachy. However, while you were doing that, your collaborator also decided to add to the story and they committed before you. Now, we need to once again pull down their changes before moving on.
 
@@ -275,7 +275,7 @@ Your first merge conflict! Everything will be OK, promise :)
 <hr>
 
 <details>
-<summary><h2>Conquer a merge conflict!</h2></summary>
+<summary><h2>13. Conquer a merge conflict!</h2></summary>
 
 In the last step, we pulled down changes from our collaborator and realized that there was a merge conflict. This occurs when you edit the same line of code. In this case, you both added on to the last line of the file. Don't worry - merge conflicts are not as intimidating as they may seem. Let's do this!
 
@@ -320,7 +320,7 @@ You successfully resolved a conflict! Continue the course in the next section.
 <hr>
 
 <details>
-<summary><h2>Request newest set of changes be merged to the canonical repo</h2></summary>
+<summary><h2>14. Request newest set of changes be merged to the canonical repo</h2></summary>
 
 We are now ready to push our local changes (including the resolved merge conflict) up to our fork (aka remote "origin"). Then, we can open a pull request (PR). 
 
@@ -344,7 +344,7 @@ You have successfully made a second pull request! Wait for your PR to be reviewe
 <hr>
 
 <details>
-<summary><h2>Close another loop after a merged MR</h2></summary>
+<summary><h2>15. Close another loop after a merged MR</h2></summary>
 
 Your PR was merged! Yay! Now, remember that "closing the loop" thing we did after our last PR was merged? Let's do it again.
 
@@ -366,7 +366,7 @@ You have once again closed the loop after your PR was merged! We are almost done
 <hr>
 
 <details>
-<summary><h2>Using a gitignore file</h2></summary>
+<summary><h2>16. Using a gitignore file</h2></summary>
 
 The last topic we are going to cover in this tutorial is the `.gitignore` file. These files are used when you have a local file that you don't want to track changes to in a commit or put on GitHub. You simply add the name of the file (including directory structure when applicable) to the `.gitignore` file to have Git *ignore* it (see what they did there?). This practice is often used for intermediate files created by processes within your repo, temporary files, or really large data that need to be stored elsewhere. Additional information about `.gitignore` files can be found in [this article](https://www.pluralsight.com/guides/how-to-use-gitignore-file).
 
@@ -394,7 +394,7 @@ Once you open your PR, wait for it to be reviewed and merged. Once your PR has b
 <hr>
 
 <details>
-<summary><h2>In conclusion ...</h2></summary>
+<summary><h2>17. In conclusion ...</h2></summary>
 
 Welcome to the end of the hands on tutorial with Git and GitHub! You have now been exposed and practiced the basic workflow that is common for collaborating on codebases in open science. Below is a summary of all the concepts you learn. Feel free to screenshot/copy/bookmark that section to use as a reference in the future. At the very end of this section, we share resources that you may be interested in exploring later as you embark on your journey to become a Git and collaborative coding expert!
 
