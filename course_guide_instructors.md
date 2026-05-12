@@ -37,7 +37,7 @@ Every participant taking this course will need their own repo based on this temp
 
 1. Create the new repository using the "Use this template" button near the top and name the repo `learning-gitflows-[username]`. DO NOT check the box that says "Include all branches". You can optionally fill in the repo description with "Git training repo for [ Learner's Name ]". Then choose "Create repository".
 1. Customize/cleanup the repo. Follow the additional instructions below this list depending on whether you are offering this course as the static or dynamic version. Then return here to do step 3.
-1. Change the settings so that PRs cannot be merged without a review. Go to Settings > Branches > Click "Edit" next to `main`. Then, check the boxes next to `Require a pull request before merging` and `Require approvals`. Make sure the required number of approvals is set to 1. See image below this list for an example of what this should look like.
+1. Change the settings so that PRs cannot be merged without a review. Go to Settings > Branches > Click "Add classic branch protection rule". Type "main" under the field for `Branch name pattern`. Then, check the boxes next to `Require a pull request before merging` and `Require approvals`. Make sure the required number of approvals is set to 1. See image below this list for an example of what this should look like.
 1. Invite the participant as a collaborator to this new repository.
 
 ![image](https://github.com/CUAHSI/learning-gitflows-template/assets/13220910/7d8516d9-6249-4ba4-9f6d-59b5ecb7c074)
